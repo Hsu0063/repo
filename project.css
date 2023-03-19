@@ -1,7 +1,7 @@
 @import url('reset.css');
 
 body{
-  font-family: 'Noto Sans TC',sans-serif !important;
+  font-family: Serif,sans-serif ;
   line-height: 1.6;
   background-color: #ffffff;
   color:black
@@ -90,6 +90,7 @@ body{
     text-decoration: none;
     left: 332px;
     top: 125px;
+    color: #000;
 }
 
 .top .pic1{
