@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/picture.css">
   
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <title>Project</title>
+    <title>HomePage</title>
     <!-- 讓網頁標題有logo -->
     <link rel="icon" href="img/logo icon.ico" type="image/x-icon"/>
 
@@ -19,6 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -66,7 +68,7 @@
             <div class="number2text">
                 
                 <h1># 新手香民小教室</h1>
-                <h2>香水怎麼噴？噴香水必學5技巧與噴香水位置2大類分享</h2>
+                <h2>噴香水小技巧與如何挑選適合自己的香水</h2>
             </div>
             <img src="img/Slideshow1.png" style="width:100%">
         </div>
@@ -129,15 +131,46 @@
 
 
         <div class="header">
-            <div class="top wow animate__animated animate__slideInUp">
+            <div class="top">
                 <a href="html/fragrances.html">[ 最新消息 ] 2023.03.15  春夏香水新上市！
                                             點我逛逛→→→</a>
-                <img src="img/perfume img.png" alt="" class="pic1">
-                <img src="img/yellow.png" alt="" class="pic2">
+                <img data-aos="fade-up" data-aos-duration="2000"  src="img/perfume img.png" alt="" class="pic1">
+                <img data-aos="fade-up" data-aos-duration="3000"  src="img/yellow.png" alt="" class="pic2">
+
+                <!-- <img   src="img/perfume img.png" alt="" class="pic1">
+                <img  src="img/yellow.png" alt="" class="pic2"> -->
             </div>
+
+            <!-- 專欄文章 -->
             
+            <div class="blog">
+                <h1>BLOG</h1>
+                <div class="blog-item">
+                    <a href="#"><img src="img/blog1.png" alt=""></a>
+                    <div class="blog-txt">
+                        <h2>Feb 23,2023</h2>
+                        <p>探索香水成分：從天然香精到合成香料</p>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <a href="#"><img src="img/blog2.png" alt=""></a>
+                    <div class="blog-txt">
+                        <h2>Jan 02,2023</h2>
+                        <p>香水與記憶：聞香記人是真的嗎？</p>
+                    </div>
+                </div>
+                <div class="blog-item">
+                    <a href="#"><img src="img/blog3.png" alt=""></a>
+                    <div class="blog-txt">
+                        <h2>Jul 26,2022</h2>
+                        <p>用香水來療癒身心：了解香氛療法的奧妙</p>
+                    </div>
+                </div>
+            </div>  
+            
+            <!-- 名言佳句 -->
             <div class="banner">
-                <img src="img/woman.png" alt="">
+                <img data-aos="flip-left" data-aos-duration="1000"  src="img/woman.png" alt="">
                 <div class="container">
                     <div class="banner-txt">
                         
@@ -171,10 +204,27 @@
        
         </div>
     <!-- 找CDN JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
+    
+    <!-- 回到頂端按鈕 -->
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
+    <script>
+    $(function(){
+        $('#BackTop').click(function(){ 
+            $('html,body').animate({scrollTop:0}, 333);
+        });
+        $(window).scroll(function() {
+            if ( $(this).scrollTop() > 300 ){
+                $('#BackTop').fadeIn(222);
+            } else {
+                $('#BackTop').stop().fadeOut(222);
+            }
+        }).scroll();
+    });
+    </script>
+    
     <script>
         $(function(){
             let is_open = 0;
@@ -193,6 +243,10 @@
             })
         })
 
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>
