@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>About</title>
+
+    <!-- 讓網頁標題有logo -->
+    <link rel="icon" href="../img/logo icon.ico" type="image/x-icon"/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Caveat&family=Kalam:wght@300&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="about">
+
+        <div class="nav">
+            <a href="../html/index.html" class="logo"><img src="../img/logo.png" alt=""></a>
+            <span class = faa><i class="fa fa-bars"></i></span>
+            <nav class="navbar"> 
+                <ul>
+                    <li><a href="../html/about.html">關於我們</a></li>
+                    <li><a href="../html/fragrances.html">身體香氛</a></li>
+                    <li><a href="../html/HomeFragraces.html">居家香氛</a></li>
+                    <li><a href="../html/Create.html">調香體驗</a></li>
+                    <li><a href="../html/location.html">實體據點</a></li>
+                    <li><a href="../html/question.html">常見問題</a></li>
+    
+                    <li>
+                        <a href="../html/member.html"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </nav>   
+        </div>
+
+        <div class="header">
+            <div class="main">
+
+            <div class="top wow animate__animated animate__slideInUp">
+                <img src="../img/about_hand.png" alt="" class="pic1">
+            </div>
+                <img src="../img/about_create.png" alt="" class="pic2">
+                <img src="../img/about_cat.png" alt="" class="pic3">
+                <img src="../img/about_flower.png" alt="" class="pic4">
+                <h1>About us</h1>
+                <!-- <h2>關於我們</h2> -->
+                <p class="p1">想要將您的故事轉化為獨一無二的香水嗎？<br>
+                    歡迎參與我們的調香體驗，打造專屬於自己<br>
+                    的香氛。我們也提供客製化服務，無論是要<br>
+                    送禮或是尋找自己的氣味，日常香談所都是<br>
+                    您最好的選擇。
+                </p>
+                <p class="p2">店內產品皆使用寵物友善配方，每一瓶香水<br>
+                    都是由天然成分所製成，不含有任何有害物質，<br>
+                    讓您安心與毛小孩共同感受優雅的氛圍。
+                </p>
+                <p class="p3">我們以自然為靈感、以香氣為媒介呈現生活中的<br>
+                    風景，希望將日常最美好的時刻，透過瓶中香氛<br>
+                    與您分享，讓每個人都能在繁忙的日子裡<br>
+                    享受到片刻的寧靜和美好。
+                </p>
+
+            </div>
+            <div class="footer">
+                <img src="logo.png" alt="">
+                <p>聯絡電話｜ +886-3-4251108<br>
+                    服務時間｜每週星期一至五 10：00~18：00<br>
+                    合作洽詢｜daily@gmail.com<br>
+                    地址｜台北市中山區南京東路三段219號五樓<br>
+                    統編｜31415926</p>
+                    <img src="../img/logo png.png" alt="">
+
+                <div class="app">
+                    
+                        <span class="fb"><a href="https://www.facebook.com/" target="_blank"><i id="social-fb" class="fab fa-facebook-square"></i></a></span>
+                        <span class="ig"><a href="https://www.instagram.com/" target="_blank"><i id="social-ig" class="fab fa-instagram"></i></a></span>
+                        <span class="en"><a href="https://mail.google.com/mail/" target="_blank"><i id="social-en" class="far fa-envelope"></i></a></span>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 找CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            let is_open = 0;
+            //一開始讓選單縮上去
+            // $('.navbar').slideUp();
+            //點擊menu後slidedown
+            $('.faa').click(function(){
+                // if(is_open == 0){
+                //     $('.navbar').slideDown();
+                //     is_open = 1;
+                // }else{
+                //     $('.navbar').slideUp();
+                //     is_open = 0;
+                // }
+                $('.navbar').toggleClass("-on");
+            })
+        })
+
+    </script>
+
+</body>
+
+
+</html>

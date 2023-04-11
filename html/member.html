@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/member.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <title>Document</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+<div class="wrapper about">
+
+    <div class="nav">
+        <a href="../html/index.html" class="logo"><img src="../img/logo.png" alt=""></a>
+        <a href="#" class = "faa"><i class="fa fa-bars"></i></a>
+        <nav class="navbar"> 
+            <ul>
+                <li><a href="../html/about.html">關於我們</a></li>
+                <li><a href="../html/fragrances.html">身體香氛</a></li>
+                <li><a href="../html/HomeFragraces.html">居家香氛</a></li>
+                <li><a href="../html/Create.html">調香體驗</a></li>
+                <li><a href="../html/location.html">實體據點</a></li>
+                <li><a href="../html/question.html">常見問題</a></li>
+
+                <li>
+                    <a href="../html/member.html"><i class="fas fa-shopping-cart"></i></a>
+                </li>
+            </ul>
+        </nav>   
+    </div>
+
+
+    <div class="login">
+        <h1>Login</h1>
+        <form action="">
+            <input type="text" placeholder="帳號">
+            <input type="password" placeholder="密碼">
+            <button>登入</button>
+        </form>
+    </div>
+
+    <script>
+        //取得login
+        let login = document.querySelector('.login')
+
+        let span
+        let inTime, outTime
+        let isIn = true //開關打開
+        let isOut
+
+        //滑鼠滑入
+        login.addEventListener('mouseenter', function(e)
+        {
+            isOut = false
+            if(isIn)
+            {
+                inTime = new Date().getTime()
+
+                //span元素
+                span = document.createElement('span')
+                login.appendChild(span)
+
+                span.style.animation = 'in .5s ease-out forwards'
+
+                //跟隨滑鼠位置
+                let top = e.clientY - e.target.offsetTop
+                let left = e.clientX - e.target.offsetLeft
+
+                span.style.top = top + 'px'
+                span.style.left = left + 'px'
+
+                isIn = false //執行後關閉
+                isOut = true //執行完再打開
+            }
+
+        })
+        //滑鼠離開
+        login.addEventListener('mouseleave', function(e)
+        {
+            if(isOut)
+            {
+                outTime = new Date().getTime()
+                let passTime = outTime - inTime
+
+                if(passTime < 500)
+                {
+                    setTimeout(mouseleave, 500 - passTime)
+                }
+                else
+                {
+                    mouseleave()
+                }
+            }
+
+            function mouseleave()
+            {
+                span.style.animation = 'out .5s ease-out forwards'
+
+                //跟隨滑鼠位置
+                let top = e.clientY - e.target.offsetTop
+                let left = e.clientX - e.target.offsetLeft
+
+                span.style.top = top + 'px'
+                span.style.left = left + 'px'
+
+                //定時器
+                setTimeout(function()
+                {
+                    login.removeChild(span)
+                    isIn = true //執行完再打開
+                }, 500)
+            }
+        })
+    </script>
+    <div class="footer">
+        
+        <p>聯絡電話｜ +886-3-4251108<br>
+          服務時間｜每週星期一至五 10：00~18：00<br>
+          合作洽詢｜daily@gmail.com<br>
+          地址｜台北市中山區南京東路三段219號五樓<br>
+          統編｜31415926</p>
+          <img src="../img/logo png.png" alt="">
+
+        <div class="app">
+            
+                <span class="fb"><a href="https://www.facebook.com/" target="_blank"><i id="social-fb" class="fab fa-facebook-square"></i></a></span>
+                <span class="ig"><a href="https://www.instagram.com/" target="_blank"><i id="social-ig" class="fab fa-instagram"></i></a></span>
+                <span class="en"><a href="https://mail.google.com/mail/" target="_blank"><i id="social-en" class="far fa-envelope"></i></a></span>
+            
+    </div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            let is_open = 0;
+            //一開始讓選單縮上去
+            // $('.navbar').slideUp();
+            //點擊menu後slidedown
+            $('.faa').click(function(){
+                // if(is_open == 0){
+                //     $('.navbar').slideDown();
+                //     is_open = 1;
+                // }else{
+                //     $('.navbar').slideUp();
+                //     is_open = 0;
+                // }
+                $('.navbar').toggleClass("-on");
+            })
+        })
+
+    </script>
+</body>
+</html>
