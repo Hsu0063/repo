@@ -76,19 +76,20 @@ body{
 
 .numbertext h2{
     font-size: 16px;
-    padding-top: 100px;
+    padding-top: 90px;
     padding-left: 250px;
 }
 
 .numbertext h1{
-    font-size: 32px;
-    padding-top: 40px;
-    padding-left: 230px;
+    font-size: 36px;
+    padding-top: 50px;
+    padding-left: 190px;
+    font-family:'Cormorant Garamond';
 }
 
 .numbertext p{
-    font-size: 12px;
-    padding-top: 50px;
+    font-size: 14px;
+    padding-top: 40px;
     padding-left: 245px;
 }
 
